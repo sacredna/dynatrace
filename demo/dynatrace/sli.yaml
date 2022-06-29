@@ -1,11 +1,11 @@
 spec_version: 0.1.4
 indicators:
   db_calls: ""
-  exception_per_reqeust: metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():avg:names
-  kpi_et_ex: metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():sum:names
+  exception_per_reqeust: entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():avg:names
+  kpi_et_ex: entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():sum:names
   kpi_rt: MV2;MicroSecond;metricSelector=calc:service.cloudautomationteststepresponsetime:splitBy("Test
     Step"):avg:names
   non_db_calls: ""
-  svc_rt_p50: ""
-  svc_rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(90.000000):names
-  svc_rt_p95: ""
+  svc_rt_p50: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():median:names
+  svc_rt_p75: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(75):names
+  svc_rt_p90: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
