@@ -6,28 +6,6 @@ comparison:
   number_of_comparison_results: 3
   aggregate_function: avg
 objectives:
-- sli: non_db_calls
-  displayName: ""
-  pass:
-  - criteria:
-    - <45000
-    - <=+10%
-  warning:
-  - criteria:
-    - <+20%
-  weight: 1
-  key_sli: false
-- sli: db_calls
-  displayName: ""
-  pass:
-  - criteria:
-    - <22000
-    - <=+10%
-  warning:
-  - criteria:
-    - <+20%
-  weight: 1
-  key_sli: false
 - sli: kpi_rt
   displayName: ""
   pass:
@@ -89,6 +67,28 @@ objectives:
     - <=200
   weight: 2
   key_sli: true
+- sli: non_db_calls
+  displayName: ""
+  pass:
+  - criteria:
+    - <45000
+    - <=+10%
+  warning:
+  - criteria:
+    - <+20%
+  weight: 1
+  key_sli: false
+- sli: db_calls
+  displayName: ""
+  pass:
+  - criteria:
+    - <22000
+    - <=+10%
+  warning:
+  - criteria:
+    - <+20%
+  weight: 1
+  key_sli: false
 total_score:
   pass: 85%
   warning: 80%
