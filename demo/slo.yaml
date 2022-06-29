@@ -6,46 +6,6 @@ comparison:
   number_of_comparison_results: 3
   aggregate_function: avg
 objectives:
-- sli: svc_rt_p95
-  displayName: ""
-  pass:
-  - criteria:
-    - <1100
-  warning:
-  - criteria:
-    - <2000
-  weight: 2
-  key_sli: true
-- sli: svc_rt_p90
-  displayName: ""
-  pass:
-  - criteria:
-    - <600
-  warning:
-  - criteria:
-    - <800
-  weight: 2
-  key_sli: true
-- sli: svc_rt_p50
-  displayName: ""
-  pass:
-  - criteria:
-    - <2
-  warning:
-  - criteria:
-    - <3
-  weight: 2
-  key_sli: true
-- sli: kpi_et_ex
-  displayName: ""
-  pass:
-  - criteria:
-    - <=100
-  warning:
-  - criteria:
-    - <=200
-  weight: 2
-  key_sli: true
 - sli: non_db_calls
   displayName: ""
   pass:
@@ -68,16 +28,6 @@ objectives:
     - <+20%
   weight: 1
   key_sli: false
-- sli: exception_per_reqeust
-  displayName: ""
-  pass:
-  - criteria:
-    - <1
-  warning:
-  - criteria:
-    - <3
-  weight: 2
-  key_sli: true
 - sli: kpi_rt
   displayName: ""
   pass:
@@ -97,6 +47,46 @@ objectives:
   warning:
   - criteria:
     - <800
+  weight: 2
+  key_sli: true
+- sli: svc_rt_p75
+  displayName: ""
+  pass:
+  - criteria:
+    - <400
+  warning:
+  - criteria:
+    - <6000
+  weight: 2
+  key_sli: true
+- sli: svc_rt_p50
+  displayName: ""
+  pass:
+  - criteria:
+    - <2
+  warning:
+  - criteria:
+    - <3
+  weight: 2
+  key_sli: true
+- sli: exception_per_reqeust
+  displayName: ""
+  pass:
+  - criteria:
+    - <1
+  warning:
+  - criteria:
+    - <3
+  weight: 2
+  key_sli: true
+- sli: kpi_et_ex
+  displayName: ""
+  pass:
+  - criteria:
+    - <=100
+  warning:
+  - criteria:
+    - <=200
   weight: 2
   key_sli: true
 total_score:
