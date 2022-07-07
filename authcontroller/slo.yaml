@@ -6,48 +6,49 @@ comparison:
   number_of_comparison_results: 3
   aggregate_function: avg
 objectives:
-- sli: kpi_rt
+- sli: rt_teststep
   displayName: ""
   pass:
   - criteria:
-    - <600
+    - <1000
     - <=+15%
   warning:
   - criteria:
-    - <=1000
+    - "1500"
+    - <=+20%
   weight: 1
   key_sli: true
-- sli: svc_rt_p90
+- sli: rt_teststep_p90
   displayName: ""
   pass:
   - criteria:
-    - <600
+    - <1000
   warning:
   - criteria:
-    - <800
+    - <1500
   weight: 2
   key_sli: true
-- sli: svc_rt_p75
+- sli: rt_teststep_p75
   displayName: ""
   pass:
   - criteria:
-    - <400
+    - <1200
   warning:
   - criteria:
-    - <6000
+    - <1700
   weight: 2
   key_sli: true
-- sli: svc_rt_p50
+- sli: rt_teststep_p50
   displayName: ""
   pass:
   - criteria:
-    - <2
+    - <1000
   warning:
   - criteria:
-    - <3
+    - <+20%
   weight: 2
   key_sli: true
-- sli: exception_per_reqeust
+- sli: expt_teststep_per_reqeust
   displayName: ""
   pass:
   - criteria:
@@ -89,6 +90,16 @@ objectives:
     - <+20%
   weight: 1
   key_sli: false
+- sli: svc_cputime_avg
+  displayName: ""
+  pass:
+  - criteria:
+    - <1
+  warning:
+  - criteria:
+    - <2
+  weight: 3
+  key_sli: true
 total_score:
   pass: 85%
   warning: 80%
