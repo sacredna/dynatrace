@@ -9,4 +9,4 @@ indicators:
   rt_teststep_p50: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():median:names
   rt_teststep_p75: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(75):names
   rt_teststep_p90: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
-  svc_cputime_avg: ""
+  svc_cputime_avg: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.cpu.perRequest:splitBy():avg:names
