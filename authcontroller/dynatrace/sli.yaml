@@ -1,12 +1,11 @@
 spec_version: 0.1.4
 indicators:
-  db_calls: entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.dbChildCallCount:splitBy():sum:names
-  expt_teststep_per_reqeust: entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():avg:names
-  kpi_et_ex: entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():sum:names
-  non_db_calls: entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.nonDbChildCallCount:splitBy():sum:names
-  rt_teststep: MV2;MicroSecond;metricSelector=calc:service.cloudautomationteststepresponsetime:splitBy("Test
+  db_calls: entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.dbChildCallCount:splitBy():sum:names
+  expt_teststep_per_reqeust: metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():avg:names
+  non_db_calls: entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.nonDbChildCallCount:splitBy():sum:names
+  rt_teststep_avg: MV2;MicroSecond;metricSelector=calc:service.cloudautomationteststepresponsetime:splitBy("Test
     Step"):avg:names
-  rt_teststep_p50: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():median:names
-  rt_teststep_p75: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(75):names
-  rt_teststep_p90: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
+  rt_teststep_p50: MV2;MicroSecond;entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.response.time:splitBy():median:names
+  rt_teststep_p75: MV2;MicroSecond;entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.response.time:splitBy():percentile(75):names
+  rt_teststep_p90: MV2;MicroSecond;entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.response.time:splitBy():percentile(90):names
   svc_cputime_avg: MV2;MicroSecond;entitySelector=type(SERVICE),tag("keptn_managed")&metricSelector=builtin:service.cpu.perRequest:splitBy():avg:names
