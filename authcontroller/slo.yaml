@@ -68,18 +68,6 @@ objectives:
     - <=+20%
   weight: 1
   key_sli: true
-- sli: non_db_calls
-  displayName: ""
-  pass:
-  - criteria:
-    - <10000
-    - <=+10%
-  warning:
-  - criteria:
-    - "15000"
-    - <+20%
-  weight: 1
-  key_sli: false
 - sli: db_calls
   displayName: ""
   pass:
@@ -89,6 +77,18 @@ objectives:
   warning:
   - criteria:
     - "20000"
+    - <+20%
+  weight: 1
+  key_sli: false
+- sli: non_db_calls
+  displayName: ""
+  pass:
+  - criteria:
+    - <10000
+    - <=+10%
+  warning:
+  - criteria:
+    - "15000"
     - <+20%
   weight: 1
   key_sli: false
