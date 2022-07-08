@@ -72,11 +72,11 @@ objectives:
   displayName: ""
   pass:
   - criteria:
-    - <10000
+    - <50
     - <=+10%
   warning:
   - criteria:
-    - "15000"
+    - "70"
     - <+20%
   weight: 1
   key_sli: false
@@ -84,11 +84,11 @@ objectives:
   displayName: ""
   pass:
   - criteria:
-    - <15000
+    - <15
     - <=+10%
   warning:
   - criteria:
-    - "20000"
+    - "15"
     - <+20%
   weight: 1
   key_sli: false
