@@ -6,26 +6,6 @@ comparison:
   number_of_comparison_results: 3
   aggregate_function: avg
 objectives:
-- sli: svc_cputime_avg
-  displayName: ""
-  pass:
-  - criteria:
-    - <500
-  warning:
-  - criteria:
-    - <1000
-  weight: 3
-  key_sli: true
-- sli: expt_teststep_per_reqeust
-  displayName: ""
-  pass:
-  - criteria:
-    - <1
-  warning:
-  - criteria:
-    - <3
-  weight: 2
-  key_sli: true
 - sli: rt_teststep_p50
   displayName: ""
   pass:
@@ -91,6 +71,26 @@ objectives:
   - criteria:
     - <2000
   weight: 2
+  key_sli: true
+- sli: expt_teststep_per_reqeust
+  displayName: ""
+  pass:
+  - criteria:
+    - <1
+  warning:
+  - criteria:
+    - <3
+  weight: 2
+  key_sli: true
+- sli: svc_cputime_avg
+  displayName: ""
+  pass:
+  - criteria:
+    - <500
+  warning:
+  - criteria:
+    - <1000
+  weight: 3
   key_sli: true
 total_score:
   pass: 85%
