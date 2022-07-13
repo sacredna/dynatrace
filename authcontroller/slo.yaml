@@ -46,16 +46,6 @@ objectives:
     - <1700
   weight: 2
   key_sli: true
-- sli: rt_teststep_p90
-  displayName: ""
-  pass:
-  - criteria:
-    - <1500
-  warning:
-  - criteria:
-    - <2000
-  weight: 2
-  key_sli: true
 - sli: rt_teststep_avg
   displayName: ""
   pass:
@@ -92,6 +82,16 @@ objectives:
     - <+20%
   weight: 1
   key_sli: false
+- sli: rt_teststep_p90
+  displayName: ""
+  pass:
+  - criteria:
+    - <1500
+  warning:
+  - criteria:
+    - <2000
+  weight: 2
+  key_sli: true
 total_score:
   pass: 85%
   warning: 80%
