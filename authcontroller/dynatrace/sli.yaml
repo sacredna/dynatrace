@@ -3,7 +3,7 @@ indicators:
   db_calls: metricSelector=calc:service.numberofcallstodb_tsn:splitBy():avg:names
   expt_teststep_per_reqeust: entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=calc:service.cloudautomationexceptionsbyteststep:splitBy():avg:names
   non_db_calls: metricSelector=calc:service.numberofcallstootherservicesintsn:splitBy():avg:names
-  rt_teststep_avg: MV2;MicroSecond;metricSelector=calc:service.cloudautomationteststepresponsetime:splitBy("Test
+  rt_teststep_avg: metricSelector=calc:service.cloudautomationteststepresponsetime:splitBy("Test
     Step"):avg:names
   rt_teststep_p50: MV2;MicroSecond;entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.response.time:splitBy():median:names
   rt_teststep_p75: MV2;MicroSecond;entitySelector=type(SERVICE),requestAttribute("57544e5d-dc26-4eed-89c9-2f316507cba3")&metricSelector=builtin:service.response.time:splitBy():percentile(75):names
