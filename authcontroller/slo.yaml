@@ -1,97 +1,61 @@
 spec_version: ""
 filter: {}
 comparison:
-  compare_with: several_results
-  include_result_with_score: pass
-  number_of_comparison_results: 3
-  aggregate_function: avg
+    compare_with: single_result
+    include_result_with_score: pass
+    number_of_comparison_results: 1
+    aggregate_function: avg
 objectives:
-- sli: rt_teststep_p50
-  displayName: ""
-  pass:
-  - criteria:
-    - <1000
-  warning:
-  - criteria:
-    - <+20%
-  weight: 2
-  key_sli: true
-- sli: rt_teststep_p75
-  displayName: ""
-  pass:
-  - criteria:
-    - <1200
-  warning:
-  - criteria:
-    - <1700
-  weight: 2
-  key_sli: true
-- sli: rt_teststep_avg
-  displayName: ""
-  pass:
-  - criteria:
-    - <1500
-    - <=+15%
-  warning:
-  - criteria:
-    - "2000"
-    - <=+20%
-  weight: 1
-  key_sli: true
-- sli: non_db_calls
-  displayName: ""
-  pass:
-  - criteria:
-    - <50
-    - <=+10%
-  warning:
-  - criteria:
-    - "70"
-    - <+20%
-  weight: 1
-  key_sli: false
-- sli: db_calls
-  displayName: ""
-  pass:
-  - criteria:
-    - <15
-    - <=+10%
-  warning:
-  - criteria:
-    - "15"
-    - <+20%
-  weight: 1
-  key_sli: false
-- sli: rt_teststep_p90
-  displayName: ""
-  pass:
-  - criteria:
-    - <1500
-  warning:
-  - criteria:
-    - <2000
-  weight: 2
-  key_sli: true
-- sli: expt_teststep_per_reqeust
-  displayName: ""
-  pass:
-  - criteria:
-    - <1
-  warning:
-  - criteria:
-    - <3
-  weight: 2
-  key_sli: true
-- sli: svc_cputime_avg
-  displayName: ""
-  pass:
-  - criteria:
-    - <500
-  warning:
-  - criteria:
-    - <1000
-  weight: 3
-  key_sli: true
+    - sli: rt_teststep_p50
+      displayName: ""
+      pass:
+        - criteria:
+            - <1000
+      warning:
+        - criteria:
+            - <+20%
+      weight: 2
+      key_sli: true
+    - sli: rt_teststep_p75
+      displayName: ""
+      pass:
+        - criteria:
+            - <1200
+      warning:
+        - criteria:
+            - <1700
+      weight: 2
+      key_sli: true
+    - sli: rt_teststep_p90
+      displayName: ""
+      pass:
+        - criteria:
+            - <1500
+      warning:
+        - criteria:
+            - <2000
+      weight: 2
+      key_sli: true
+    - sli: expt_teststep_per_reqeust
+      displayName: ""
+      pass:
+        - criteria:
+            - <1
+      warning:
+        - criteria:
+            - <3
+      weight: 2
+      key_sli: true
+    - sli: svc_cputime_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <500
+      warning:
+        - criteria:
+            - <1000
+      weight: 3
+      key_sli: true
 total_score:
-  pass: 85%
-  warning: 80%
+    pass: 85%
+    warning: 80%
