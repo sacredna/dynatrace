@@ -26,6 +26,15 @@ objectives:
             - <1700
       weight: 2
       key_sli: true
+    - sli: rt_teststep_avg
+      displayName: ""
+      pass:
+        - criteria:
+            - <1500
+            - <=+15%
+      warning: []
+      weight: 1
+      key_sli: true
     - sli: non_db_calls
       displayName: ""
       pass:
