@@ -55,10 +55,10 @@ objectives:
       displayName: ""
       pass:
         - criteria:
-            - <1500
+            - '>1500'
       warning:
         - criteria:
-            - <2000
+            - '>2000'
       weight: 2
       key_sli: true
     - sli: expt_teststep_per_reqeust
