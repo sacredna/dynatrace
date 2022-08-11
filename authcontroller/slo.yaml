@@ -11,19 +11,13 @@ objectives:
       pass:
         - criteria:
             - <1000
-      warning:
-        - criteria:
-            - <+20%
+      warning: []
       weight: 2
       key_sli: true
     - sli: rt_teststep_p75
       displayName: ""
-      pass:
-        - criteria:
-            - <1200
-      warning:
-        - criteria:
-            - <1700
+      pass: []
+      warning: []
       weight: 2
       key_sli: true
     - sli: rt_teststep_avg
@@ -53,12 +47,8 @@ objectives:
       key_sli: false
     - sli: rt_teststep_p90
       displayName: ""
-      pass:
-        - criteria:
-            - '>1500'
-      warning:
-        - criteria:
-            - '>2000'
+      pass: []
+      warning: []
       weight: 2
       key_sli: true
     - sli: expt_teststep_per_reqeust
