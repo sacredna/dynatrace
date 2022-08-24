@@ -6,14 +6,6 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: rt_teststep_p50
-      displayName: ""
-      pass:
-        - criteria:
-            - <1000
-      warning: []
-      weight: 2
-      key_sli: true
     - sli: rt_teststep_p75
       displayName: ""
       pass: []
@@ -25,7 +17,6 @@ objectives:
       pass:
         - criteria:
             - <1500
-            - <=+15%
       warning: []
       weight: 1
       key_sli: true
@@ -45,12 +36,6 @@ objectives:
       warning: []
       weight: 1
       key_sli: false
-    - sli: rt_teststep_p90
-      displayName: ""
-      pass: []
-      warning: []
-      weight: 2
-      key_sli: true
     - sli: expt_teststep_per_reqeust
       displayName: ""
       pass:
@@ -70,6 +55,20 @@ objectives:
         - criteria:
             - <1000
       weight: 3
+      key_sli: true
+    - sli: rt_teststep_p90
+      displayName: ""
+      pass: []
+      warning: []
+      weight: 2
+      key_sli: true
+    - sli: rt_teststep_p50
+      displayName: ""
+      pass:
+        - criteria:
+            - <1300
+      warning: []
+      weight: 2
       key_sli: true
 total_score:
     pass: 85%
