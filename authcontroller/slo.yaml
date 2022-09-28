@@ -6,16 +6,6 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: rt_resptime_p75
-      displayName: ""
-      pass:
-        - criteria:
-            - <1500
-      warning:
-        - criteria:
-            - <1800
-      weight: 2
-      key_sli: true
     - sli: rt_teststep_avg
       displayName: ""
       pass:
@@ -29,7 +19,9 @@ objectives:
       pass:
         - criteria:
             - <50
-      warning: []
+      warning:
+        - criteria:
+            - <70
       weight: 1
       key_sli: false
     - sli: db_calls
@@ -37,19 +29,11 @@ objectives:
       pass:
         - criteria:
             - <15
-      warning: []
-      weight: 1
-      key_sli: false
-    - sli: expt_teststep_per_reqeust
-      displayName: ""
-      pass:
-        - criteria:
-            - <1
       warning:
         - criteria:
-            - <3
-      weight: 2
-      key_sli: true
+            - <30
+      weight: 1
+      key_sli: false
     - sli: svc_cputime_avg
       displayName: ""
       pass:
@@ -60,22 +44,32 @@ objectives:
             - <1000
       weight: 3
       key_sli: true
-    - sli: rt_resptime_p50
-      displayName: ""
-      pass:
-        - criteria:
-            - <1300
-      warning:
-        - criteria:
-            - <1600
-      weight: 2
-      key_sli: true
     - sli: rt_teststep_p50
       displayName: ""
       pass:
         - criteria:
             - <1300
       warning: []
+      weight: 2
+      key_sli: true
+    - sli: rt_resptime_p90
+      displayName: ""
+      pass:
+        - criteria:
+            - <1700
+      warning:
+        - criteria:
+            - <2000
+      weight: 2
+      key_sli: true
+    - sli: rt_resptime_p75
+      displayName: ""
+      pass:
+        - criteria:
+            - <1500
+      warning:
+        - criteria:
+            - <1800
       weight: 2
       key_sli: true
 total_score:
