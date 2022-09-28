@@ -6,10 +6,14 @@ comparison:
     number_of_comparison_results: 3
     aggregate_function: avg
 objectives:
-    - sli: rt_teststep_p75
+    - sli: rt_resptime_p75
       displayName: ""
-      pass: []
-      warning: []
+      pass:
+        - criteria:
+            - <1500
+      warning:
+        - criteria:
+            - <1800
       weight: 2
       key_sli: true
     - sli: rt_teststep_avg
@@ -56,10 +60,14 @@ objectives:
             - <1000
       weight: 3
       key_sli: true
-    - sli: rt_teststep_p90
+    - sli: rt_resptime_p50
       displayName: ""
-      pass: []
-      warning: []
+      pass:
+        - criteria:
+            - <1300
+      warning:
+        - criteria:
+            - <1600
       weight: 2
       key_sli: true
     - sli: rt_teststep_p50
