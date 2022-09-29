@@ -19,29 +19,31 @@ objectives:
       pass:
         - criteria:
             - <50
-      warning:
-        - criteria:
-            - <70
-      weight: 1
-      key_sli: false
+      warning: []
+      weight: 3
+      key_sli: true
     - sli: db_calls
       displayName: ""
       pass:
         - criteria:
             - <15
-      warning:
+      warning: []
+      weight: 3
+      key_sli: true
+    - sli: rt_teststep_p50
+      displayName: ""
+      pass:
         - criteria:
-            - <30
-      weight: 1
-      key_sli: false
+            - <1300
+      warning: []
+      weight: 2
+      key_sli: true
     - sli: svc_cputime_avg
       displayName: ""
       pass:
         - criteria:
             - <500
-      warning:
-        - criteria:
-            - <1000
+      warning: []
       weight: 3
       key_sli: true
     - sli: rt_teststep_p50
@@ -57,9 +59,7 @@ objectives:
       pass:
         - criteria:
             - <1700
-      warning:
-        - criteria:
-            - <2000
+      warning: []
       weight: 2
       key_sli: true
     - sli: rt_resptime_p75
@@ -67,9 +67,7 @@ objectives:
       pass:
         - criteria:
             - <1500
-      warning:
-        - criteria:
-            - <1800
+      warning: []
       weight: 2
       key_sli: true
 total_score:
