@@ -7,7 +7,7 @@ comparison:
     aggregate_function: avg
 objectives:
     - sli: rt_teststep_avg
-      displayName: ""
+      displayName: Response Time by Test Step
       pass:
         - criteria:
             - <1500
@@ -15,7 +15,7 @@ objectives:
       weight: 1
       key_sli: true
     - sli: non_db_calls
-      displayName: ""
+      displayName: Non DB calls
       pass:
         - criteria:
             - <50
@@ -23,31 +23,91 @@ objectives:
       weight: 3
       key_sli: true
     - sli: db_calls
-      displayName: ""
+      displayName: DB calls
       pass:
         - criteria:
             - <15
       warning: []
       weight: 3
       key_sli: true
+    - sli: throughput_(request_count)
+      displayName: Throughput (Request Count)
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: lock_time
+      displayName: Lock time
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: throughput_(request_count)
+      displayName: Throughput (Request Count)
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: cpu_time
+      displayName: CPU time
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: lock_time
+      displayName: Lock time
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: io_time
+      displayName: IO time
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: io_time
+      displayName: IO time
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
     - sli: rt_teststep_p50
-      displayName: ""
+      displayName: Response time (P50)
       pass:
         - criteria:
             - <1300
       warning: []
       weight: 2
       key_sli: true
+    - sli: 총_exception_count
+      displayName: 총 Exception Count
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
     - sli: svc_cputime_avg
-      displayName: ""
+      displayName: CPU time (P50)
       pass:
         - criteria:
             - <500
       warning: []
       weight: 3
       key_sli: true
+    - sli: non_db_calls
+      displayName: Non DB calls
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
+    - sli: db_calls
+      displayName: DB calls
+      pass: []
+      warning: []
+      weight: 1
+      key_sli: false
     - sli: rt_teststep_p50
-      displayName: ""
+      displayName: Response time (P50)
       pass:
         - criteria:
             - <1300
@@ -55,7 +115,7 @@ objectives:
       weight: 2
       key_sli: true
     - sli: rt_resptime_p90
-      displayName: ""
+      displayName: Response time (P90)
       pass:
         - criteria:
             - <1700
@@ -63,7 +123,7 @@ objectives:
       weight: 2
       key_sli: true
     - sli: rt_resptime_p75
-      displayName: ""
+      displayName: Response time (P75)
       pass:
         - criteria:
             - <1500
